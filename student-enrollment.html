@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Choose an Ejire Tech course and share your learner profile.">
+    <meta name="theme-color" content="#f3f8fd">
+    <title>Learner Profile | Ejire Tech</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+    <script src="supabase-client.js" defer></script>
+    <script src="auth-pages.js" defer></script>
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <header class="site-header auth-page-header">
+        <nav class="navbar container" aria-label="Main navigation">
+            <a class="brand" href="index.html#home" aria-label="Ejire Tech home"><img class="brand-logo" src="IMG-20261027-WA0065.jpg" alt="Ejire Tech, Building Tech Community"></a>
+            <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-navigation"><span></span><span></span><span></span></button>
+            <div class="nav-content" id="primary-navigation"><div class="nav-links"><a class="nav-link" href="index.html#home">Home</a><a class="nav-link" href="courses.html">Courses</a><a class="nav-link" href="about.html">About</a></div><div class="nav-actions"><a class="login-link" href="login.html">Log in</a><a class="button button-small" href="signup.html">Sign up <span aria-hidden="true">↗</span></a></div></div>
+        </nav>
+    </header>
+    <main class="content-page" id="main-content">
+        <div class="container">
+            <header class="page-intro"><p class="eyebrow"><span class="eyebrow-line"></span> STUDENT REGISTRATION · STEP 2 OF 2</p><h1>Let’s shape your learning path.</h1><p>Choose a course and share only the details that help us make your learning experience work for you.</p></header>
+            <section class="content-panel panel-wide">
+                <div class="step-indicator" aria-label="Registration progress"><span class="step-pending"><b>1</b> Account details</span><i class="step-line" aria-hidden="true"></i><span><b>2</b> Learner profile</span></div>
+                <div class="panel-heading"><h2>Learner profile</h2><p id="student-account-label">Your signed-in account details will appear here.</p></div>
+                <form id="student-enrollment-form" class="form-grid">
+                    <label class="form-field" for="course-choice">Course you want to learn<select id="course-choice" name="course" required><option value="">Choose a course</option><option value="full-stack">Full-Stack Web Development</option><option value="vibe-coding">Vibe Coding</option><option value="graphic-design">Graphic Design</option><option value="data-analytics">Data Analytics</option><option value="google-admob">Google AdMob</option></select></label>
+                    <label class="form-field" for="age-group">Age group<select id="age-group" name="age-group" required><option value="">Choose an age group</option><option value="13-17">13–17</option><option value="18-24">18–24</option><option value="25-34">25–34</option><option value="35-plus">35 or older</option></select><span class="field-hint">An age range is enough; please do not enter your date of birth. Learners under 13 cannot register through this form.</span></label>
+                    <label class="form-field" for="education-level">Education level / class<select id="education-level" name="education-level" required><option value="">Choose your current level</option><option>Primary</option><option>Secondary / High school</option><option>College / University</option><option>Graduate or postgraduate</option><option>Not currently studying</option><option>Other</option></select></label>
+                    <label class="form-field" for="class-year">Class, year, or level (optional)<input id="class-year" name="class-year" type="text" placeholder="For example, Year 2 or SS2"></label>
+                    <label class="form-field" for="current-status">Current status<select id="current-status" name="status" required><option value="">Choose your status</option><option>Student</option><option>Employed</option><option>Self-employed</option><option>Looking for work</option><option>Other</option><option>Prefer not to say</option></select></label>
+                    <label class="form-field" for="experience-level">Experience with this course topic<select id="experience-level" name="experience" required><option value="">Choose your experience</option><option>Brand new to it</option><option>Beginner</option><option>Some experience</option><option>Confident / advanced</option></select></label>
+                    <label class="remember-option form-field consent-field full-width" id="guardian-consent-field" hidden><span><input id="guardian-consent" name="guardian-consent" type="checkbox"> A parent or guardian has reviewed and approved this registration.</span></label>
+                    <label class="form-field full-width" for="access-support-choice">Would you like to request learning or accessibility support? (optional)<select id="access-support-choice" name="access-support"><option value="">Prefer not to say</option><option value="no">No</option><option value="yes">Yes</option></select></label>
+                    <label class="form-field full-width" id="access-details-field" for="access-details" hidden>What support would help you participate? (optional)<textarea id="access-details" name="access-details" placeholder="Share only the support you would like us to know about. Please do not include a diagnosis."></textarea></label>
+                    <label class="form-field full-width" for="learning-goal">What would you like to achieve? (optional)<textarea id="learning-goal" name="goal" placeholder="A skill, project, or goal you have in mind"></textarea></label>
+                    <label class="form-field full-width" for="device-access">Do you have access to a device for learning?<select id="device-access" name="device" required><option value="">Choose one</option><option>Yes, a computer</option><option>Yes, a smartphone</option><option>Both</option><option>Not yet</option><option>Prefer not to say</option></select></label>
+                    <label class="remember-option form-field consent-field full-width"><span><input id="profile-consent" name="profile-consent" type="checkbox" required> I confirm these details are accurate and agree they may be used to manage my course registration.</span></label>
+                    <div class="form-field full-width"><button class="button" type="submit">Review registration <span aria-hidden="true">→</span></button></div>
+                </form>
+                <p class="form-status" id="enrollment-status" role="status" aria-live="polite"></p>
+                <p class="form-notice">Your profile is visible to you and authorized Ejire Tech administrators for course management. Support requests are optional; do not include a diagnosis. Learners aged 13–17 need parent or guardian approval. Learners under 13 cannot use this registration form.</p>
+            </section>
+        </div>
+    </main>
+    <footer class="site-footer"><div class="container footer-bottom"><span>© <span id="current-year">2026</span> Ejire Tech.</span><a href="courses.html">Review courses</a></div></footer>
+</body>
+</html>

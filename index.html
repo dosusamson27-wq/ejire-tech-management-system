@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A clearer way for Ejire Tech to coordinate people, projects, and progress.">
+    <meta name="theme-color" content="#f6f8fb">
+    <title>Ejire Tech Management System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <header class="site-header">
+        <nav class="navbar container" aria-label="Main navigation">
+            <a class="brand" href="index.html#home" aria-label="Ejire Tech home">
+                <img class="brand-logo" src="IMG-20261027-WA0065.jpg" alt="Ejire Tech, Building Tech Community">
+            </a>
+            <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-navigation"><span></span><span></span><span></span></button>
+            <div class="nav-content" id="primary-navigation">
+                <div class="nav-links">
+                    <a class="nav-link active" href="index.html#home">Home</a>
+                    <a class="nav-link" href="courses.html">Courses</a>
+                    <a class="nav-link" href="about.html">About</a>
+                </div>
+                <div class="nav-actions">
+                    <a class="login-link" href="login.html">Log in</a>
+                    <a class="button button-small" href="signup.html">Sign up <span aria-hidden="true">↗</span></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section class="hero section" id="home">
+            <div class="container hero-layout">
+                <div class="hero-copy">
+                    <p class="eyebrow"><span class="eyebrow-line"></span> THE WORKSPACE FOR EJIRE TECH</p>
+                    <h1>Good work deserves <span>a better system.</span></h1>
+                    <p class="hero-description">Bring your people, projects, and day-to-day operations together in one clear view. Less chasing updates. More moving forward.</p>
+                    <div class="hero-actions">
+                        <a class="button" href="signup.html">Join a course <span aria-hidden="true">→</span></a>
+                        <a class="text-button" href="courses.html">Explore courses <span aria-hidden="true">↗</span></a>
+                    </div>
+                    <div class="hero-note"><span class="status-dot" aria-hidden="true"></span> One connected workspace for your team</div>
+                </div>
+
+                <div class="product-scene" aria-label="Illustration of the Ejire Tech team management dashboard">
+                    <div class="scene-orbit orbit-one"></div>
+                    <div class="scene-orbit orbit-two"></div>
+                    <div class="dashboard-card">
+                        <aside class="dash-sidebar" aria-hidden="true">
+                            <span class="dash-logo"><span class="brand-mark mini"><span></span><span></span><span></span><span></span></span></span>
+                            <span class="side-icon selected"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><rect x="14" y="14" width="6" height="6" rx="1"/></svg></span>
+                            <span class="side-icon"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3.5 19c.5-3 2.4-4.5 5.5-4.5s5 1.5 5.5 4.5M16 5.5a3 3 0 0 1 0 5.8M17 14.8c2.1.5 3.3 1.9 3.5 4.2"/></svg></span>
+                            <span class="side-icon"><svg viewBox="0 0 24 24"><path d="M5 5h14v14H5zM8 9h8M8 13h8M8 16h4"/></svg></span>
+                            <span class="side-icon"><svg viewBox="0 0 24 24"><path d="M4 19V5M4 19h16M8 15l3-4 3 2 5-7"/></svg></span>
+                        </aside>
+                        <div class="dash-main">
+                            <div class="dash-topbar"><div><span class="dash-greeting">Good morning, team</span><span class="dash-date">Tuesday, October 27</span></div><div class="dash-profile"><span class="notification-bell">♧<i></i></span><span class="avatar avatar-you">E</span></div></div>
+                            <div class="dash-heading"><div><span class="dash-kicker">YOUR OVERVIEW</span><h2>Team dashboard</h2></div><span class="period-select">This week <span aria-hidden="true">⌄</span></span></div>
+                            <div class="metric-grid">
+                                <article class="metric-card"><span class="metric-label">Active projects</span><span class="metric-value">08</span><span class="metric-change">↗ <b>2 new</b> this month</span><span class="metric-icon purple-icon">◫</span></article>
+                                <article class="metric-card"><span class="metric-label">Tasks completed</span><span class="metric-value">124</span><span class="metric-change">↗ <b>12%</b> this week</span><span class="metric-icon green-icon">✓</span></article>
+                                <article class="metric-card"><span class="metric-label">Team members</span><span class="metric-value">24</span><span class="metric-change neutral-change">Across 4 departments</span><span class="metric-icon orange-icon">♙</span></article>
+                            </div>
+                            <div class="dash-lower">
+                                <article class="activity-card"><div class="card-title-row"><div><h3>Weekly activity</h3><span>Tasks completed</span></div><span class="chart-legend"><i></i> This week</span></div><div class="chart-wrap"><div class="chart-labels"><span>40</span><span>30</span><span>20</span><span>10</span></div><div class="chart"><div class="chart-lines"><i></i><i></i><i></i><i></i></div><svg viewBox="0 0 300 110" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="chartFill" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#635bdb" stop-opacity=".2"/><stop offset="1" stop-color="#635bdb" stop-opacity="0"/></linearGradient></defs><path class="chart-area" d="M0 83 C22 75 28 66 49 69 S76 83 99 57 S132 62 151 45 S181 56 201 37 S229 45 248 25 S279 37 300 8 V110 H0Z"/><path class="chart-line" d="M0 83 C22 75 28 66 49 69 S76 83 99 57 S132 62 151 45 S181 56 201 37 S229 45 248 25 S279 37 300 8"/></svg><div class="chart-days"><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span></div></div></div></article>
+                                <article class="team-card"><div class="card-title-row"><div><h3>Team pulse</h3><span>Today, so far</span></div><span class="pulse-icon">⌁</span></div><div class="pulse-number">92<span>%</span></div><div class="pulse-track"><span></span></div><div class="pulse-caption">Attendance <b>·</b> Looking good</div><div class="team-avatars"><span class="avatar avatar-one">A</span><span class="avatar avatar-two">M</span><span class="avatar avatar-three">J</span><span class="avatar avatar-four">T</span><span class="more-avatars">+20</span></div></article>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="floating-tag"><span class="tag-check">✓</span><span><b>Project on track</b><small>All tasks up to date</small></span></div>
+                    <div class="floating-spark" aria-hidden="true">✳</div>
+                </div>
+            </div>
+            <div class="hero-bottom container"><span>MADE FOR THE WAY YOUR TEAM WORKS</span><span class="hero-bottom-line"></span><span>PEOPLE <b>·</b> PROJECTS <b>·</b> PROGRESS</span></div>
+        </section>
+
+        <section class="features section" id="features">
+            <div class="container">
+                <div class="section-heading"><div><p class="eyebrow"><span class="eyebrow-line"></span> EVERYTHING IN SYNC</p><h2>One place to keep<br>work moving.</h2></div><p class="section-intro">The essentials your team needs to stay organized, accountable, and focused on what matters.</p></div>
+                <div class="feature-grid">
+                    <article class="feature-card"><span class="feature-icon icon-purple"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3.5 19c.5-3 2.4-4.5 5.5-4.5s5 1.5 5.5 4.5M16 5.5a3 3 0 0 1 0 5.8M17 14.8c2.1.5 3.3 1.9 3.5 4.2"/></svg></span><h3>People, at a glance</h3><p>Keep staff details and team structures organized, so everyone knows who’s doing what.</p><span class="feature-index">01</span></article>
+                    <article class="feature-card"><span class="feature-icon icon-blue"><svg viewBox="0 0 24 24"><path d="M5 5h14v14H5zM8 9h8M8 13h5M8 16h3"/><path d="m15 15 1.5 1.5L20 13"/></svg></span><h3>Projects that progress</h3><p>Bring plans, tasks, and deadlines together and make the next step easy to see.</p><span class="feature-index">02</span></article>
+                    <article class="feature-card"><span class="feature-icon icon-green"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 7v5l3 2M8 3 5.5 5M16 3l2.5 2"/></svg></span><h3>Everyday activity</h3><p>Get a clear picture of attendance and team activity without chasing updates.</p><span class="feature-index">03</span></article>
+                    <article class="feature-card"><span class="feature-icon icon-orange"><svg viewBox="0 0 24 24"><path d="M4 19V5M4 19h16M8 15l3-4 3 2 5-7"/><circle cx="19" cy="6" r="1"/></svg></span><h3>Insightful reporting</h3><p>Turn day-to-day progress into useful insights that help inform better decisions.</p><span class="feature-index">04</span></article>
+                    <article class="feature-card"><span class="feature-icon icon-pink"><svg viewBox="0 0 24 24"><path d="M18 9a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4"/><path d="M19 4v3M17.5 5.5h3"/></svg></span><h3>Timely notifications</h3><p>Stay informed about key changes, upcoming deadlines, and important team updates.</p><span class="feature-index">05</span></article>
+                    <article class="feature-card"><span class="feature-icon icon-navy"><svg viewBox="0 0 24 24"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3M12 14v3"/></svg></span><h3>Access with confidence</h3><p>Support responsible, role-based access so people can focus on the work meant for them.</p><span class="feature-index">06</span></article>
+                </div>
+            </div>
+        </section>
+
+        <section class="about section" id="about">
+            <div class="container about-layout">
+                <div class="about-visual" aria-hidden="true"><div class="about-grid"></div><div class="about-note note-top"><span class="note-dot"></span> Clear priorities<span class="note-check">✓</span></div><div class="about-quote"><span class="quote-mark">“</span><p>Good systems make room for great work.</p><span class="quote-line"></span><small>EJIRE TECH WORKSPACE</small></div><div class="about-note note-bottom"><span class="mini-bars"><i></i><i></i><i></i><i></i></span> Progress, made visible</div></div>
+                <div class="about-copy"><p class="eyebrow"><span class="eyebrow-line"></span> BUILT AROUND YOUR TEAM</p><h2>Less admin.<br><span>More momentum.</span></h2><p>The Ejire Tech Management System is designed to bring the moving parts of our work into one dependable space. It gives the team a shared view of responsibilities, progress, and the details that keep daily operations running smoothly.</p><p>When information is easy to find, teams can spend less time coordinating—and more time delivering meaningful work.</p><a class="text-button about-link" href="about.html">Meet the community <span aria-hidden="true">→</span></a></div>
+            </div>
+        </section>
+
+        <section class="access section" id="access">
+                <div class="container access-panel"><div class="access-mark" aria-hidden="true"><span class="brand-mark"><span></span><span></span><span></span><span></span></span></div><div class="access-copy"><p class="eyebrow">YOUR TEAM’S WORKSPACE</p><h2>Ready to get into the flow?</h2><p>Ejire Tech team members can access their workspace here.</p></div><a class="button button-light" href="login.html">Log in <span aria-hidden="true">→</span></a><span class="access-decoration" aria-hidden="true"></span></div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-main"><a class="brand footer-brand" href="index.html#home" aria-label="Ejire Tech home"><img class="brand-logo" src="IMG-20261027-WA0065.jpg" alt="Ejire Tech, Building Tech Community"></a><p>A better way to bring great work together.</p><nav class="footer-nav" aria-label="Footer navigation"><a href="index.html#home">Home</a><a href="courses.html">Courses</a><a href="about.html">About</a><a href="login.html">Team login</a><a href="instructor-signup.html">Instructor invite</a></nav></div>
+        <div class="container footer-bottom"><span>© <span id="current-year">2026</span> Ejire Tech. All rights reserved.</span><span>Built for better work.</span></div>
+    </footer>
+
+</body>
+</html>
