@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f7f5">
+  <meta name="description" content="Ejire Tech dashboard preview">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/ejire-icon.svg" type="image/svg+xml">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Ejire Tech">
+  <title>Dashboard · Ejire Tech</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="dashboard.css">
+  <script src="pwa.js" defer></script>
+  <script src="dashboard.js" defer></script>
+</head>
+<body>
+  <div class="dashboard-shell" id="dashboard-shell">
+    <aside class="sidebar" id="sidebar" aria-label="Workspace sidebar">
+      <a class="brand" href="#overview" aria-label="Ejire Tech dashboard">
+        <span class="brand-symbol">e</span><span class="brand-word">ejire<span>tech</span></span>
+      </a>
+
+      <div class="workspace-switcher">
+        <span class="workspace-avatar">E</span>
+        <span class="workspace-copy"><strong>Ejire Tech</strong><small>Learning workspace</small></span>
+        <span class="switcher-chevron" aria-hidden="true">⌄</span>
+      </div>
+
+      <p class="nav-caption">WORKSPACE</p>
+      <nav class="side-nav" aria-label="Dashboard sections">
+        <a class="side-link is-active" href="#overview" aria-current="page" aria-label="Overview"><span class="side-icon">▦</span><span class="side-label">Overview</span></a>
+        <a class="side-link" href="sections/courses.html" aria-label="Courses"><span class="side-icon">▤</span><span class="side-label">Courses</span><span class="side-count">12</span></a>
+        <a class="side-link" href="sections/classes.html" aria-label="Classes"><span class="side-icon">▧</span><span class="side-label">Classes</span></a>
+        <a class="side-link" href="sections/students.html" aria-label="Students"><span class="side-icon">♙</span><span class="side-label">Students</span></a>
+        <a class="side-link" href="sections/instructors.html" aria-label="Instructors"><span class="side-icon">♧</span><span class="side-label">Instructors</span></a>
+      </nav>
+
+      <p class="nav-caption nav-caption-spaced">INSIGHTS</p>
+      <nav class="side-nav" aria-label="Insights">
+        <a class="side-link" href="sections/attendance.html" aria-label="Attendance"><span class="side-icon">◷</span><span class="side-label">Attendance</span></a>
+        <a class="side-link" href="sections/assignments.html" aria-label="Assignments"><span class="side-icon">▱</span><span class="side-label">Assignments</span><span class="nav-dot"></span></a>
+        <a class="side-link" href="sections/reports.html" aria-label="Reports"><span class="side-icon">▥</span><span class="side-label">Reports</span></a>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <div class="sidebar-help">
+          <span class="help-spark">✳</span>
+          <strong>Need a hand?</strong>
+          <p>Find answers or contact your workspace support team.</p>
+          <a href="mailto:support@ejiretech.com">Visit help center <span aria-hidden="true">↗</span></a>
+        </div>
+        <button class="signed-in-user" id="profile-button" type="button" aria-label="Open mock profile menu">
+          <span class="user-avatar avatar-admin" data-user-initials>AM</span>
+          <span class="signed-in-copy"><strong data-user-name>Alex Morgan</strong><small data-user-role>Administrator</small></span>
+          <span class="user-more" aria-hidden="true">···</span>
+        </button>
+      </div>
+    </aside>
+
+    <button class="mobile-scrim" id="mobile-scrim" type="button" aria-label="Close navigation"></button>
+
+    <main class="main-area" id="overview">
+      <header class="topbar">
+        <div class="topbar-start">
+          <button class="icon-button menu-button" id="menu-button" type="button" aria-label="Collapse sidebar"><span></span><span></span><span></span></button>
+          <div class="breadcrumb"><span>Workspace</span><span class="breadcrumb-slash">/</span><strong>Overview</strong></div>
+        </div>
+        <div class="topbar-end">
+          <button class="button button-secondary install-button" id="pwa-install" type="button" hidden>Install app</button>
+          <label class="search-box">
+            <span class="search-icon" aria-hidden="true">⌕</span>
+            <input id="dashboard-search" type="search" placeholder="Search your workspace" aria-label="Search dashboard items">
+            <kbd>/</kbd>
+          </label>
+          <button class="icon-button theme-button" id="theme-button" type="button" aria-label="Switch to dark mode"><span aria-hidden="true">☾</span></button>
+          <div class="notification-anchor">
+            <button class="icon-button notification-button" id="notification-button" type="button" aria-label="Open notifications" aria-expanded="false">
+              <span aria-hidden="true">♧</span><span class="notification-badge" id="notification-badge">3</span>
+            </button>
+            <section class="notification-menu" id="notification-menu" aria-label="Notifications" hidden>
+              <div class="notification-menu-heading"><div><strong>Notifications</strong><small>Recent workspace updates</small></div><button class="quiet-button" id="mark-read-button" type="button">Mark all read</button></div>
+              <div id="notification-list"></div>
+            </section>
+          </div>
+          <button class="user-avatar avatar-admin topbar-avatar" id="topbar-profile" type="button" aria-label="Open mock profile menu" data-user-initials>AM</button>
+        </div>
+      </header>
+
+      <div class="page-content">
+        <section class="welcome-row">
+          <div>
+            <div class="overline"><span class="overline-line"></span><span>MONDAY, OCTOBER 26, 2026</span></div>
+            <h1>Good morning, <span data-first-name>Alex</span><span class="greeting-spark">✳</span></h1>
+            <p>Here’s what’s happening across your learning community.</p>
+          </div>
+          <div class="welcome-actions">
+            <button class="button button-secondary" id="date-button" type="button"><span aria-hidden="true">▦</span> This month <span class="button-chevron">⌄</span></button>
+            <button class="button button-primary" id="quick-action-button" type="button"><span class="button-plus" aria-hidden="true">＋</span> Quick action</button>
+          </div>
+        </section>
+
+        <section class="stats-grid" aria-label="Workspace summary">
+          <article class="stat-card">
+            <div class="stat-card-top"><span class="stat-label">Total students</span><span class="stat-icon stat-icon-mint" aria-hidden="true">♙</span></div>
+            <div class="stat-main"><strong>1,284</strong><span class="stat-change change-positive"><span>↗</span> 12.8%</span></div>
+            <div class="stat-foot"><span>vs. last month</span><span class="mini-bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span></div>
+          </article>
+          <article class="stat-card">
+            <div class="stat-card-top"><span class="stat-label">Instructors</span><span class="stat-icon stat-icon-lilac" aria-hidden="true">♧</span></div>
+            <div class="stat-main"><strong>48</strong><span class="stat-change change-positive"><span>↗</span> 4.3%</span></div>
+            <div class="stat-foot"><span>vs. last month</span><span class="mini-bars mini-bars-lilac" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span></div>
+          </article>
+          <article class="stat-card">
+            <div class="stat-card-top"><span class="stat-label">Active courses</span><span class="stat-icon stat-icon-peach" aria-hidden="true">▤</span></div>
+            <div class="stat-main"><strong>32</strong><span class="stat-change change-positive"><span>↗</span> 8.6%</span></div>
+            <div class="stat-foot"><span>vs. last month</span><span class="mini-bars mini-bars-peach" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span></div>
+          </article>
+          <article class="stat-card">
+            <div class="stat-card-top"><span class="stat-label">Classes this month</span><span class="stat-icon stat-icon-blue" aria-hidden="true">▧</span></div>
+            <div class="stat-main"><strong>156</strong><span class="stat-change change-neutral">Across 12 courses</span></div>
+            <div class="stat-foot"><span>24 scheduled this week</span><span class="mini-bars mini-bars-blue" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span></div>
+          </article>
+        </section>
+
+        <section class="analytics-grid" aria-label="Learning analytics">
+          <article class="panel enrollment-panel state-host" id="enrollment-panel" aria-busy="false">
+            <div class="panel-heading">
+              <div><span class="panel-eyebrow">LEARNING ACTIVITY</span><h2>Enrollment overview</h2><p>Student enrollment across all courses</p></div>
+              <button class="select-button" id="chart-range-button" type="button">Last 7 months <span aria-hidden="true">⌄</span></button>
+            </div>
+            <div class="chart-summary"><strong>1,284</strong><span class="chart-summary-change">↗ 12.8%</span><small>enrolled students</small></div>
+            <div class="chart-legend"><span><i class="legend-mark legend-current"></i>This year</span><span><i class="legend-mark legend-previous"></i>Last year</span></div>
+            <div class="chart-wrap" role="img" aria-label="Bar chart comparing monthly student enrollments this year with last year">
+              <div class="chart-y-labels" aria-hidden="true"><span>1,400</span><span>1,050</span><span>700</span><span>350</span><span>0</span></div>
+              <div class="chart-plot">
+                <div class="chart-grid-lines" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+                <div class="chart-groups">
+                  <div class="chart-group"><span class="chart-bar bar-last" style="--bar-height:37%"></span><span class="chart-bar bar-current" style="--bar-height:45%"></span><small>Apr</small></div>
+                  <div class="chart-group"><span class="chart-bar bar-last" style="--bar-height:44%"></span><span class="chart-bar bar-current" style="--bar-height:53%"></span><small>May</small></div>
+                  <div class="chart-group"><span class="chart-bar bar-last" style="--bar-height:42%"></span><span class="chart-bar bar-current" style="--bar-height:58%"></span><small>Jun</small></div>
+                  <div class="chart-group"><span class="chart-bar bar-last" style="--bar-height:57%"></span><span class="chart-bar bar-current" style="--bar-height:69%"></span><small>Jul</small></div>
+                  <div class="chart-group"><span class="chart-bar bar-last" style="--bar-height:51%"></span><span class="chart-bar bar-current" style="--bar-height:64%"></span><small>Aug</small></div>
+                  <div class="chart-group"><span class="chart-bar bar-last" style="--bar-height:65%"></span><span class="chart-bar bar-current" style="--bar-height:82%"></span><small>Sep</small></div>
+                  <div class="chart-group"><span class="chart-bar bar-last" style="--bar-height:70%"></span><span class="chart-bar bar-current" style="--bar-height:94%"></span><small>Oct</small></div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="panel attendance-panel state-host" id="attendance-panel" aria-busy="false">
+            <div class="panel-heading">
+              <div><span class="panel-eyebrow">CLASS PARTICIPATION</span><h2>Attendance rate</h2><p>Average attendance this month</p></div>
+              <button class="icon-button more-button" type="button" aria-label="Attendance chart options">···</button>
+            </div>
+            <div class="attendance-content">
+              <div class="donut-chart" role="img" aria-label="Attendance is 86 percent">
+                <div class="donut-hole"><strong>86<span>%</span></strong><small>attendance</small></div>
+              </div>
+              <div class="attendance-key">
+                <div><span class="key-label"><i class="key-dot key-present"></i>Present</span><strong>86%</strong></div>
+                <div><span class="key-label"><i class="key-dot key-late"></i>Late</span><strong>9%</strong></div>
+                <div><span class="key-label"><i class="key-dot key-absent"></i>Absent</span><strong>5%</strong></div>
+              </div>
+            </div>
+            <div class="attendance-foot"><span class="attendance-trend">↗ 3.2%</span><span>compared with last month</span></div>
+          </article>
+        </section>
+
+        <section class="lower-grid" aria-label="Dashboard details">
+          <article class="panel classes-panel state-host" id="classes-panel" aria-busy="false">
+            <div class="panel-heading panel-heading-table">
+              <div><span class="panel-eyebrow">COMING UP</span><h2>Upcoming classes</h2><p>Your next sessions across the workspace</p></div>
+              <button class="text-link" data-module="Classes" type="button">View schedule <span aria-hidden="true">→</span></button>
+            </div>
+            <div class="table-scroll">
+              <table class="classes-table">
+                <thead><tr><th>CLASS</th><th>INSTRUCTOR</th><th>DATE &amp; TIME</th><th>STATUS</th></tr></thead>
+                <tbody id="classes-table-body"></tbody>
+              </table>
+            </div>
+            <div class="table-footer"><span id="classes-count">Showing upcoming sessions</span><button class="pagination-button" id="table-next" type="button" aria-label="Show more classes">→</button></div>
+          </article>
+
+          <article class="panel activity-panel state-host" id="activity-panel" aria-busy="false">
+            <div class="panel-heading">
+              <div><span class="panel-eyebrow">WORKSPACE PULSE</span><h2>Recent activity</h2><p>Latest updates from your community</p></div>
+              <button class="icon-button more-button" type="button" aria-label="Activity options">···</button>
+            </div>
+            <div class="activity-list" id="activity-list"></div>
+            <button class="activity-more" id="activity-more" type="button">View activity log <span aria-hidden="true">→</span></button>
+          </article>
+        </section>
+
+        <section class="bottom-grid" aria-label="Course and assignment summary">
+          <article class="panel progress-panel state-host" id="courses-panel" aria-busy="false">
+            <div class="panel-heading">
+              <div><span class="panel-eyebrow">COURSE HEALTH</span><h2>Top courses</h2><p>By student enrollment</p></div>
+              <button class="text-link" data-module="Courses" type="button">All courses <span aria-hidden="true">→</span></button>
+            </div>
+            <div class="course-list" id="course-list"></div>
+          </article>
+          <article class="panel assignment-panel state-host" id="assignments-panel" aria-busy="false">
+            <div class="panel-heading">
+              <div><span class="panel-eyebrow">NEEDS ATTENTION</span><h2>Assignment progress</h2><p>Submissions due this week</p></div>
+              <span class="due-count"><span class="due-pulse"></span> 8 due</span>
+            </div>
+            <div class="assignment-summary"><strong>72<span>%</span></strong><span>completion rate</span><div class="progress-track"><span style="width:72%"></span></div></div>
+            <div class="assignment-footer"><span><i class="task-dot task-complete"></i>48 submitted</span><span><i class="task-dot task-pending"></i>19 in progress</span><span><i class="task-dot task-late"></i>8 overdue</span></div>
+            <button class="assignment-link" data-module="Assignments" type="button">Review assignments <span aria-hidden="true">→</span></button>
+          </article>
+        </section>
+
+        <footer class="page-footer"><span>© 2026 Ejire Tech</span><span><i class="status-online"></i>Workspace data last updated just now</span></footer>
+      </div>
+      <div class="toast-region" id="toast-region" aria-live="polite" aria-atomic="true"></div>
+    </main>
+  </div>
+</body>
+</html>

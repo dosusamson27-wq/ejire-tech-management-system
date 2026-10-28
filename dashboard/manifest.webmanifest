@@ -1,0 +1,21 @@
+{
+  "id": "./index.html",
+  "name": "Ejire Tech Management System",
+  "short_name": "Ejire Tech",
+  "description": "A connected workspace for the Ejire Tech learning community.",
+  "lang": "en",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#f5f7f5",
+  "theme_color": "#f5f7f5",
+  "icons": [
+    {
+      "src": "icons/ejire-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

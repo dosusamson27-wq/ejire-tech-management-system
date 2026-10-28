@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f7f5">
+  <meta name="description" content="Ejire Tech Instructor Portal">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="../icons/ejire-icon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="instructor.css">
+  <script src="../pwa.js" defer></script>
+  <script src="instructor.js" defer></script>
+  <title>Instructor Dashboard · Ejire Tech</title>
+</head>
+<body>
+  <div class="instructor-shell" id="instructor-shell">
+    <aside class="instructor-sidebar" id="instructor-sidebar" aria-label="Instructor navigation">
+      <a class="instructor-brand" href="#dashboard" aria-label="Ejire Tech Instructor Portal">
+        <span class="instructor-brand-mark">e</span><span class="instructor-brand-name">ejire<span>tech</span></span>
+      </a>
+      <div class="portal-label"><span class="portal-label-dot"></span> INSTRUCTOR PORTAL</div>
+      <div class="instructor-identity"><span class="identity-avatar" id="sidebar-initials">OC</span><span><strong id="sidebar-name">Olivia Chen</strong><small>Instructor</small></span><span class="identity-menu">⌄</span></div>
+      <nav class="instructor-nav" aria-label="Instructor sections">
+        <p class="instructor-nav-caption">MAIN</p>
+        <a href="#dashboard" class="instructor-nav-link is-active" data-page="dashboard"><span>▦</span><b>Dashboard</b></a>
+        <a href="#courses" class="instructor-nav-link" data-page="courses"><span>▤</span><b>My Courses</b></a>
+        <a href="#students" class="instructor-nav-link" data-page="students"><span>♙</span><b>My Students</b></a>
+        <a href="#schedule" class="instructor-nav-link" data-page="schedule"><span>▧</span><b>Class Schedule</b></a>
+        <p class="instructor-nav-caption">TEACHING</p>
+        <a href="#attendance" class="instructor-nav-link" data-page="attendance"><span>◷</span><b>Attendance</b></a>
+        <a href="#assignments" class="instructor-nav-link" data-page="assignments"><span>▱</span><b>Assignments</b><i class="nav-indicator" id="assignment-nav-indicator"></i></a>
+        <a href="#materials" class="instructor-nav-link" data-page="materials"><span>▧</span><b>Learning Materials</b></a>
+        <a href="#progress" class="instructor-nav-link" data-page="progress"><span>⌁</span><b>Student Progress</b></a>
+        <p class="instructor-nav-caption">COMMUNICATION</p>
+        <a href="#announcements" class="instructor-nav-link" data-page="announcements"><span>◉</span><b>Announcements</b></a>
+        <a href="#notifications" class="instructor-nav-link" data-page="notifications"><span>♧</span><b>Notifications</b><i class="nav-count" id="nav-unread-count">3</i></a>
+        <p class="instructor-nav-caption">ACCOUNT</p>
+        <a href="#reports" class="instructor-nav-link" data-page="reports"><span>▥</span><b>Reports &amp; Analytics</b></a>
+        <a href="#activity" class="instructor-nav-link" data-page="activity"><span>↻</span><b>Activity Log</b></a>
+        <a href="#profile" class="instructor-nav-link" data-page="profile"><span>◌</span><b>My Profile</b></a>
+        <a href="#settings" class="instructor-nav-link" data-page="settings"><span>⚙</span><b>Settings</b></a>
+      </nav>
+      <div class="instructor-sidebar-bottom">
+        <div class="instructor-help"><span>✳</span><div><strong>Need a hand?</strong><small>Your teaching team is here to help.</small></div><a href="mailto:support@ejiretech.com" aria-label="Contact support">↗</a></div>
+        <button id="logout-button" class="logout-button" type="button"><span>↪</span> Sign out <small>Handled by Authentication</small></button>
+      </div>
+    </aside>
+    <button class="instructor-scrim" id="instructor-scrim" type="button" aria-label="Close navigation"></button>
+
+    <main class="instructor-main">
+      <header class="instructor-topbar">
+        <div class="topbar-leading">
+          <button class="instructor-menu-button" id="instructor-menu-button" type="button" aria-label="Collapse navigation"><span></span><span></span><span></span></button>
+          <div class="instructor-breadcrumb"><span>Instructor Portal</span><i>/</i><strong id="current-page-label">Dashboard</strong></div>
+        </div>
+        <div class="instructor-topbar-actions">
+          <label class="instructor-search"><span aria-hidden="true">⌕</span><input id="global-search" type="search" placeholder="Search · press Enter" aria-label="Search instructor workspace"><kbd>/</kbd></label>
+          <button class="instructor-icon-button" id="pwa-install" type="button" aria-label="Install Instructor Portal" title="Install app" hidden><span>⇩</span></button>
+          <button class="instructor-icon-button" id="instructor-theme-button" type="button" aria-label="Switch to dark theme"><span>☾</span></button>
+          <button class="instructor-icon-button topbar-notifications" id="topbar-notifications" type="button" aria-label="Open notifications"><span>♧</span><i id="topbar-unread-count">3</i></button>
+          <button class="instructor-top-avatar" id="topbar-profile" type="button" aria-label="Open instructor profile">OC</button>
+        </div>
+      </header>
+      <section class="instructor-content" id="instructor-content" aria-live="polite"></section>
+      <div class="instructor-toast-region" id="instructor-toast-region" aria-live="polite" aria-atomic="true"></div>
+    </main>
+  </div>
+  <dialog class="instructor-dialog" id="instructor-dialog" aria-labelledby="dialog-title">
+    <form method="dialog" class="dialog-dismiss-row"><button class="dialog-close" aria-label="Close dialog" value="cancel">×</button></form>
+    <div id="dialog-content"></div>
+  </dialog>
+</body>
+</html>
